@@ -41,18 +41,18 @@ export default class PostList extends Component {
     let items = this.state.blogs.map((post) => {
      if (post.author) {
        return(
-
+         <Link to={`/ShowPost/${post._id}`} key={post._id}>
         <div id="blogPost">
+
+
 
         <h2> Author: {post.author}</h2>
         <h2> Title: {post.title}</h2>
 
-        
-        <Link to={`/ShowPost/:id ${post._id}`} key={post._id}></Link>
-
-        <p id="readMore"><a href="/ShowPost/:id">Read More...</a></p>
 
          </div>
+         </Link>
+
        );
      }
    });

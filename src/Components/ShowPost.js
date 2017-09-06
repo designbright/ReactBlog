@@ -19,7 +19,9 @@ export default class ShowPost extends Component {
     const { id } = this.props.match.params;
     const URL = `https://tiny-lasagna-server.herokuapp.com/collections/blogger/${id}`;
 
-    fetch(URL).then(response => response.json()).then(data =>
+    fetch(URL)
+    .then(response => response.json())
+    .then(data =>
       this.setState({author: data.author, title: data.title, blog: data.blog}))
   }
 
@@ -32,5 +34,7 @@ export default class ShowPost extends Component {
         <p>{this.state.blog}</p>
       </div>
     )
+    console.log(this.state);
+
   }
 }

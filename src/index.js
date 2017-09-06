@@ -21,8 +21,7 @@ ReactDOM.render(
     <BaseLayout>
       <Switch>
         <Route exact path="/" component={App}/>
-        <Route path="/ShowPost" component={PostList}/>
-          <Route path="/ShowPost/:id" component={ShowPost} />
+        <Route path="/ShowPost/:id" component={ShowPost} />
         <Route path="/CreatePost" component={CreatePost} />
         <Route path="/PostList" component={PostList}/>
 
